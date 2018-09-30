@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="LayoutStyles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="Header">
+        <h1><strong>Welcome to KC Financial Inc.</strong></h1>
+        </div>
+     <div class="LeftPanel">
+         <asp:TreeView ID="TreeView1" runat="server" Height="313px" Width="268px" ImageSet="BulletedList2" ShowExpandCollapse="False" ShowLines="True">
+             <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+             <Nodes>
+                 <asp:TreeNode NavigateUrl="~/Customer/Customer.aspx" Text="My Home" Value="My Home"></asp:TreeNode>
+                 <asp:TreeNode Text="View Payees" Value="View Payees" NavigateUrl="~/Customer/ViewPayee.aspx"></asp:TreeNode>
+                 <asp:TreeNode Text="Add Payees" Value="Add Payees" NavigateUrl="~/Customer/AddPayee.aspx"></asp:TreeNode>
+                 <asp:TreeNode Text="Fund Transfer" Value="Fund Transfer" NavigateUrl="~/Customer/FundTransfer.aspx"></asp:TreeNode>
+                 <asp:TreeNode Text="e-Payment" Value="e-Payment" NavigateUrl="~/Customer/ePayment.aspx"></asp:TreeNode>
+                 <asp:TreeNode NavigateUrl="~/Admin/Admin.aspx" Text="Bank Admin" Value="Bank Admin"></asp:TreeNode>
+                 <asp:TreeNode NavigateUrl="~/HomePage.aspx" Text="Login &amp; SignUp" Value="Login &amp; SignUp"></asp:TreeNode>
+             </Nodes>
+             <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="0px" NodeSpacing="0px" VerticalPadding="0px" />
+             <ParentNodeStyle Font-Bold="False" />
+             <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
+         </asp:TreeView>
+         </div>
+        <div class="CenterPanel">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </div>
+    </form>
+</body>
+</html>

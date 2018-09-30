@@ -1,0 +1,26 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+   
+    <link href="LayoutStyles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="Header">
+        <h1 style="height: 49px"><strong>Welcome to KC Financial Inc.</strong></h1>
+&nbsp;</div>
+        <div class="LeftPanel">
+        </div>
+        <div class="CenterPanel">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <p>
+                </p>
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
